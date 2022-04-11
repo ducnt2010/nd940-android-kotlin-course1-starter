@@ -65,7 +65,7 @@
     </style>
 
     <style name="LabelDetailStyle">
-        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_width">112dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:fontFamily">@font/roboto</item>

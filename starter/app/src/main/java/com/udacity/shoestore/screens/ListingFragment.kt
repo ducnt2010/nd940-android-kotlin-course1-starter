@@ -6,13 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ListingFragmentBinding
+import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.viewmodels.ShoeViewModel
 import timber.log.Timber
 
 class ListingFragment : Fragment() {
     private lateinit var binding: ListingFragmentBinding
+    private lateinit var viewModel: ShoeViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,6 +29,15 @@ class ListingFragment : Fragment() {
             container,
             false
         )
+        Timber.i("onCreateView")
+        viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
+
+        viewModel.listShoe.observe(viewLifecycleOwner, Observer { listShoe: MutableList<Shoe> ->
+            for (shoe in listShoe) {
+                Timber.i("get shoe from list: $shoe")
+            }
+        })
+
         binding.buttonAdd.setOnClickListener { view: View ->
             view.findNavController()
                 .navigate(ListingFragmentDirections.actionListingFragmentToDetailFragment())
@@ -31,4 +45,30 @@ class ListingFragment : Fragment() {
 
         return binding.root
     }
+
+//    override fun onStart() {
+//        super.onStart()
+//        Timber.i("onStart")
+//    }
+//
+//    override fun onResume() {
+//        super.onResume()
+//        Timber.i("onResume")
+//
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//        Timber.i("onPause")
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        Timber.i("onStop")
+//    }
+//
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        Timber.i("onDestroyView")
+//    }
 }

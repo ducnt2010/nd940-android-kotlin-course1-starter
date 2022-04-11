@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/shoe_item_background">
+
+        <TextView
+            android:id="@+id/textLabelName"
+            style="@style/LabelDetailStyle"
+            android:text="@string/shoe_name"
+            app:layout_constraintBaseline_toBaselineOf="@id/textDetailName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textDetailName"
+            style="@style/InputDetailStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textLabelName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/shoe_name" />
+
+        <TextView
+            android:id="@+id/textLabelSize"
+            style="@style/LabelDetailStyle"
+            android:text="@string/shoe_size"
+            app:layout_constraintBaseline_toBaselineOf="@id/textDetailSize"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textDetailSize"
+            style="@style/InputDetailStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textLabelSize"
+            app:layout_constraintTop_toBottomOf="@id/textDetailName"
+            tools:text="@string/shoe_size" />
+
+        <TextView
+            android:id="@+id/textLabelCompany"
+            style="@style/LabelDetailStyle"
+            android:text="@string/shoe_size"
+            app:layout_constraintBaseline_toBaselineOf="@id/textDetailCompany"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textDetailCompany"
+            style="@style/InputDetailStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textLabelCompany"
+            app:layout_constraintTop_toBottomOf="@id/textDetailSize"
+            tools:text="@string/company_name" />
+
+        <TextView
+            android:id="@+id/textLabelDescription"
+            style="@style/LabelDetailStyle"
+            android:text="@string/shoe_size"
+            app:layout_constraintBaseline_toBaselineOf="@id/textDetailDescription"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textDetailDescription"
+            style="@style/InputDetailStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textLabelDescription"
+            app:layout_constraintTop_toBottomOf="@id/textDetailCompany"
+            tools:text="@string/description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
