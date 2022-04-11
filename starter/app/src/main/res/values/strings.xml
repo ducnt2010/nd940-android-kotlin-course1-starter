@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email">Email</string>
+    <string name="shoe_store">Shoe Store</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_with_exiting_account">Login with exiting account</string>
+    <string name="welcome">Welcome!!!</string>
+    <string name="welcome_content">A power full system to manager your Shoe store.</string>
+    <string name="click_to_instruction">Click \"NEXT\" for more instructions</string>
+    <string name="next">Next</string>
+    <string name="shoe_list">Shoe list</string>
+    <string name="instruction_list_shoe">We have a list contain shoes in the inventory </string>
+    <string name="add_shoe">Add shoe</string>
+    <string name="instruction_add_shoe">We can add new shoes into the list </string>
+    <string name="got_it">Got it!</string>
+    <string name="go_to_the_list">Go to the List</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="company_name">Company name</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="size_of_shoes">Size of shoes</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+
 </resources>

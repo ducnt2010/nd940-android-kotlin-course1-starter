@@ -3,9 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textWelcome"
+            style="@style/BigTextStyle"
+            android:text="@string/welcome" />
+
+        <ImageView
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            app:srcCompat="@drawable/ic_welcome"
+            app:tint="@color/greenLight"/>
+
+        <TextView
+            android:id="@+id/textContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/welcome_content"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/textInstruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:text="@string/click_to_instruction"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:text="@string/next"
+            style="@style/NavigateButtonStyle" />
+
+    </LinearLayout>
 </layout>

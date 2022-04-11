@@ -3,9 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            style="@style/BigTextStyle"
+            android:text="Instructions" />
+
+        <ImageView
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/ic_bookmarks"
+            app:tint="@color/greenLight" />
+
+        <TextView
+            style="@style/InstructionTitleStyle"
+            android:text="@string/shoe_list" />
+
+        <TextView
+            android:text="@string/instruction_list_shoe"
+            style="@style/InstructionDetailStyle" />
+
+        <TextView
+            style="@style/InstructionTitleStyle"
+            android:text="@string/add_shoe" />
+
+        <TextView
+            android:text="@string/instruction_add_shoe"
+            style="@style/InstructionDetailStyle" />
+        <Button
+            android:id="@+id/goListButton"
+            android:text="@string/go_to_the_list"
+            style="@style/NavigateButtonStyle" />
+    </LinearLayout>
 </layout>
