@@ -38,10 +38,10 @@ class DetailFragment : Fragment() {
             viewLifecycleOwner,
             Observer { isNewShoeAdded: Boolean ->
                 if (isNewShoeAdded) {
-                    Timber.i("new shoe was added")
                     findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
                     viewModel.onNewShoeAddedComplete()
                     viewModel.resetInput()
+                    Timber.i("new shoe was added")
                 }
             })
 
@@ -53,6 +53,8 @@ class DetailFragment : Fragment() {
                         getString(R.string.fill_full_detail_information_message),
                         Toast.LENGTH_SHORT
                     ).show()
+                    viewModel.onInvalidInfoHandled()
+                    Timber.i("InvalidInfo")
                 }
             })
 

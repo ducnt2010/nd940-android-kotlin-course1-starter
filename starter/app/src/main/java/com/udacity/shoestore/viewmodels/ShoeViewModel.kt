@@ -64,7 +64,7 @@ class ShoeViewModel : ViewModel() {
         )
     }
 
-     fun resetInput() {
+    fun resetInput() {
         inputName = ""
         inputCompany = ""
         inputSize = ""
@@ -74,5 +74,9 @@ class ShoeViewModel : ViewModel() {
     fun onNewShoeAddedComplete() {
         Timber.i("onNewShoeAddedComplete")
         _eventNewShoeAdded.value = false
+    }
+
+    fun onInvalidInfoHandled() {
+        _eventInvalidInfo.value = false
     }
 }
