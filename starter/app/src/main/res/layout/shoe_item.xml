@@ -3,11 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="shoeItem"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@drawable/shoe_item_background">
+        android:background="@drawable/shoe_item_background"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/textLabelName"
@@ -19,6 +26,7 @@
         <TextView
             android:id="@+id/textDetailName"
             style="@style/InputDetailStyle"
+            android:text="@{shoeItem.name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/textLabelName"
             app:layout_constraintTop_toTopOf="parent"
@@ -34,6 +42,7 @@
         <TextView
             android:id="@+id/textDetailSize"
             style="@style/InputDetailStyle"
+            android:text="@{Double.toString(shoeItem.size)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/textLabelSize"
             app:layout_constraintTop_toBottomOf="@id/textDetailName"
@@ -42,13 +51,14 @@
         <TextView
             android:id="@+id/textLabelCompany"
             style="@style/LabelDetailStyle"
-            android:text="@string/shoe_size"
+            android:text="@string/company"
             app:layout_constraintBaseline_toBaselineOf="@id/textDetailCompany"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textDetailCompany"
             style="@style/InputDetailStyle"
+            android:text="@{shoeItem.company}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/textLabelCompany"
             app:layout_constraintTop_toBottomOf="@id/textDetailSize"
@@ -57,13 +67,14 @@
         <TextView
             android:id="@+id/textLabelDescription"
             style="@style/LabelDetailStyle"
-            android:text="@string/shoe_size"
+            android:text="@string/description"
             app:layout_constraintBaseline_toBaselineOf="@id/textDetailDescription"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textDetailDescription"
             style="@style/InputDetailStyle"
+            android:text="@{shoeItem.description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/textLabelDescription"
             app:layout_constraintTop_toBottomOf="@id/textDetailCompany"

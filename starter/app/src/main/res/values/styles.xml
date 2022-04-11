@@ -65,7 +65,7 @@
     </style>
 
     <style name="LabelDetailStyle">
-        <item name="android:layout_width">112dp</item>
+        <item name="android:layout_width">104dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:fontFamily">@font/roboto</item>
@@ -76,7 +76,15 @@
     <style name="InputDetailStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ItemDetailStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
         <item name="android:minHeight">48dp</item>
         <item name="android:textSize">16sp</item>
     </style>

@@ -5,69 +5,20 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/layoutListItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
-                <TextView
-                    android:background="@drawable/shoe_item_background"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:text="shoe\n shoe\n shoe\n shoe \n shoe \n shoe \n shoe"/>
+                android:orientation="vertical"
+                android:padding="16dp">
+
             </LinearLayout>
         </ScrollView>
 
@@ -75,10 +26,10 @@
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp"
-            app:srcCompat="@drawable/ic_add"/>
+            app:srcCompat="@drawable/ic_add" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

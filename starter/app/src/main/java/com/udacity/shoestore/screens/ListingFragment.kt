@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ListingFragmentBinding
+import com.udacity.shoestore.databinding.ShoeItemBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodels.ShoeViewModel
 import timber.log.Timber
@@ -34,7 +35,8 @@ class ListingFragment : Fragment() {
 
         viewModel.listShoe.observe(viewLifecycleOwner, Observer { listShoe: MutableList<Shoe> ->
             for (shoe in listShoe) {
-                Timber.i("get shoe from list: $shoe")
+//                Timber.i("get shoe from list: $shoe")
+                addShoeItem(shoe)
             }
         })
 
@@ -44,6 +46,18 @@ class ListingFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    private fun addShoeItem(shoe: Shoe) {
+        var itemView = DataBindingUtil.inflate<ShoeItemBinding>(
+            layoutInflater,
+            R.layout.shoe_item,
+            null,
+            false
+        )
+
+        itemView.shoeItem = shoe
+        binding.layoutListItem.addView(itemView.root)
     }
 
 //    override fun onStart() {

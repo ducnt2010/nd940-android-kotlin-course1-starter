@@ -28,7 +28,6 @@
             android:id="@+id/editTextShoeName"
             style="@style/InputDetailStyle"
             android:layout_marginTop="?attr/actionBarSize"
-            android:hint="What is your Shoe\'s name?"
             android:text="@={shoeViewModel.inputName}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/labelName"
@@ -44,7 +43,6 @@
         <EditText
             android:id="@+id/editTextShoeSize"
             style="@style/InputDetailStyle"
-            android:hint="@string/size_of_shoes"
             android:inputType="numberDecimal"
             android:text="@={shoeViewModel.inputSize}"
             app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +59,6 @@
         <EditText
             android:id="@+id/editTextCompany"
             style="@style/InputDetailStyle"
-            android:hint="@string/company_name"
             android:text="@={shoeViewModel.inputCompany}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/labelCompany"
@@ -77,7 +74,6 @@
         <EditText
             android:id="@+id/editTextDescription"
             style="@style/InputDetailStyle"
-            android:hint="Shoe\'s description"
             android:text="@={shoeViewModel.inputDescription}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/labelDescription"
