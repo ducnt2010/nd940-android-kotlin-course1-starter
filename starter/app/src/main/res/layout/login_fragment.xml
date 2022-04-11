@@ -3,100 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="32dp">
+        android:layout_marginTop="?attr/actionBarSize">
 
-        <TextView
-            android:id="@+id/label"
-            style="@style/BigTextStyle"
-            android:text="@string/shoe_store" />
+        <LinearLayout style="@style/LayoutGroupStyle">
 
-        <!--        <ImageView-->
-        <!--            android:id="@+id/imageViewPerson"-->
-        <!--            style="@style/LoginIconStyle"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@id/usernameInputLayout"-->
-        <!--            app:layout_constraintEnd_toStartOf="@id/usernameInputLayout"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="@id/usernameInputLayout"-->
-        <!--            app:srcCompat="@drawable/ic_person" />-->
+            <TextView
+                android:id="@+id/label"
+                style="@style/BigTextStyle"
+                android:text="@string/shoe_store" />
 
-        <!--        <com.google.android.material.textfield.TextInputLayout-->
-        <!--            android:id="@+id/usernameInputLayout"-->
-        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="32dp"-->
-        <!--            android:hint="@string/email"-->
-        <!--            app:helperTextEnabled="true">-->
+            <TextView
+                style="@style/LabelLoginStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/email" />
 
-        <!--            <com.google.android.material.textfield.TextInputEditText-->
-        <!--                android:id="@+id/usernameInputEditText"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:inputType="textEmailAddress" />-->
-        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+            <EditText
+                android:id="@+id/usernameInputEditText"
+                style="@style/LoginEditTextStyle"
+                android:inputType="textEmailAddress" />
 
-        <!--        <ImageView-->
-        <!--            android:id="@+id/imageViewLock"-->
-        <!--            style="@style/LoginIconStyle"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@id/passwordInputLayout"-->
-        <!--            app:layout_constraintEnd_toStartOf="@id/passwordInputLayout"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="@id/passwordInputLayout"-->
-        <!--            app:srcCompat="@drawable/ic_lock" />-->
+            <TextView
+                style="@style/LabelLoginStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/password" />
 
-        <!--        <com.google.android.material.textfield.TextInputLayout-->
-        <!--            android:id="@+id/passwordInputLayout"-->
-        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="32dp"-->
-        <!--            android:layout_marginBottom="24dp"-->
-        <!--            android:hint="@string/password">-->
+            <EditText
+                android:id="@+id/passwordInputEditText"
+                style="@style/LoginEditTextStyle"
+                android:inputType="textPassword" />
 
-        <!--            <com.google.android.material.textfield.TextInputEditText-->
-        <!--                android:id="@+id/passwordInputEditText"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:inputType="textPassword" />-->
-        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+            <Button
+                android:id="@+id/buttonLogin"
+                style="@style/LoginButtonStyle"
+                android:background="@drawable/login_button_background"
+                android:text="@string/login" />
 
-        <TextView
-            style="@style/LabelLoginStyle"
-            android:layout_marginTop="32dp"
-            android:text="@string/email" />
-
-        <EditText
-            android:id="@+id/usernameInputEditText"
-            style="@style/LoginEditTextStyle"
-            android:inputType="textEmailAddress" />
-
-        <TextView
-            style="@style/LabelLoginStyle"
-            android:layout_marginTop="16dp"
-            android:text="@string/password" />
-
-        <EditText
-            android:id="@+id/passwordInputEditText"
-            style="@style/LoginEditTextStyle"
-            android:inputType="textPassword" />
-
-        <Button
-            android:id="@+id/buttonLogin"
-            style="@style/LoginButtonStyle"
-            android:background="@drawable/login_button_background"
-            android:text="@string/login" />
-
-        <Button
-            android:id="@+id/buttonLoginWithExistingAccount"
-            style="@style/LoginButtonStyle"
-            android:background="@drawable/existing_login_button_background"
-            android:text="@string/login_with_exiting_account" />
-
-
-    </LinearLayout>
+            <Button
+                android:id="@+id/buttonLoginWithExistingAccount"
+                style="@style/LoginButtonStyle"
+                android:background="@drawable/existing_login_button_background"
+                android:text="@string/login_with_exiting_account" />
+        </LinearLayout>
+    </ScrollView>
 </layout>

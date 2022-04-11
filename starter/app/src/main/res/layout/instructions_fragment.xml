@@ -3,41 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="?attr/actionBarSize">
 
-        <TextView
-            style="@style/BigTextStyle"
-            android:text="Instructions" />
+        <LinearLayout style="@style/LayoutGroupStyle">
 
-        <ImageView
-            android:layout_width="@dimen/image_size"
-            android:layout_height="@dimen/image_size"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/ic_bookmarks"
-            app:tint="@color/greenLight" />
+            <TextView
+                style="@style/BigTextStyle"
+                android:text="Instructions" />
 
-        <TextView
-            style="@style/InstructionTitleStyle"
-            android:text="@string/shoe_list" />
+            <ImageView
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/ic_bookmarks"
+                app:tint="@color/greenLight" />
 
-        <TextView
-            android:text="@string/instruction_list_shoe"
-            style="@style/InstructionDetailStyle" />
+            <TextView
+                style="@style/InstructionTitleStyle"
+                android:text="@string/shoe_list" />
 
-        <TextView
-            style="@style/InstructionTitleStyle"
-            android:text="@string/add_shoe" />
+            <TextView
+                style="@style/InstructionDetailStyle"
+                android:text="@string/instruction_list_shoe" />
 
-        <TextView
-            android:text="@string/instruction_add_shoe"
-            style="@style/InstructionDetailStyle" />
-        <Button
-            android:id="@+id/goListButton"
-            android:text="@string/go_to_the_list"
-            style="@style/NavigateButtonStyle" />
-    </LinearLayout>
+            <TextView
+                style="@style/InstructionTitleStyle"
+                android:text="@string/add_shoe" />
+
+            <TextView
+                style="@style/InstructionDetailStyle"
+                android:text="@string/instruction_add_shoe" />
+
+            <Button
+                android:id="@+id/goListButton"
+                style="@style/NavigateButtonStyle"
+                android:text="@string/go_to_the_list" />
+        </LinearLayout>
+    </ScrollView>
 </layout>

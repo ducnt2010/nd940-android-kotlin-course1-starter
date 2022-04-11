@@ -108,4 +108,12 @@
         <item name="android:textColor">@color/tealDark</item>
     </style>
 
+    <style name="LayoutGroupStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/layout_group_padding</item>
+    </style>
+
 </resources>

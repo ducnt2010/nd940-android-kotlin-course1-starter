@@ -38,7 +38,6 @@ class DetailFragment : Fragment() {
             viewLifecycleOwner,
             Observer { isNewShoeAdded: Boolean ->
                 if (isNewShoeAdded) {
-//                    findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
                     findNavController().navigateUp()
                     viewModel.onNewShoeAddedComplete()
                     viewModel.resetInput()
@@ -62,9 +61,7 @@ class DetailFragment : Fragment() {
         binding.shoeViewModel = viewModel
 
         binding.buttonCancel.setOnClickListener { view: View ->
-//            view.findNavController()
-//                .navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
-            findNavController().navigateUp()
+            view.findNavController().navigateUp()
             viewModel.resetInput()
         }
 
