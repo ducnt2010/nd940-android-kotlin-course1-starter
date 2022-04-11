@@ -27,6 +27,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:fontFamily">"@font/roboto"</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="BigTextStyle">
@@ -51,7 +53,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="NavigateButtonStyle">
@@ -62,6 +64,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingLeft">32dp</item>
         <item name="android:paddingRight">32dp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="LabelDetailStyle">
@@ -87,6 +90,22 @@
         <item name="android:layout_marginStart">8dp</item>
         <item name="android:minHeight">48dp</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="LoginEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="LabelLoginStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tealDark</item>
     </style>
 
 </resources>
