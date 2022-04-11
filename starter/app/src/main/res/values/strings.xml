@@ -4,6 +4,9 @@
     <string name="shoe_store">Shoe Store</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="title_login">Login to Shoe inventory</string>
+    <string name="title_detail">Shoe detail</string>
+    <string name="title_list">Shoe list</string>
     <string name="login_with_exiting_account">Login with exiting account</string>
     <string name="welcome">Welcome!!!</string>
     <string name="welcome_content">A power full system to manager your Shoe store.</string>
@@ -19,8 +22,12 @@
     <string name="company">Company</string>
     <string name="company_name">Company name</string>
     <string name="shoe_size">Shoe Size</string>
-    <string name="size_of_shoes">Size of shoes</string>
+    <string name="size_of_shoes">Size of shoe</string>
     <string name="description">Description</string>
     <string name="save">Save</string>
+    <string name="title_welcome">Welcome on boarding</string>
+    <string name="title_instructions">Instructions on boarding</string>
+    <string name="login_error_message">Invalid email or password!</string>
+    <string name="fill_full_detail_information_message">Fill full detail information to add a new shoe</string>
 
 </resources>
