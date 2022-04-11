@@ -30,18 +30,8 @@ class LoginFragment : Fragment() {
         )
 
         binding.buttonLogin.setOnClickListener { view: View ->
-            if (binding.usernameInputEditText.text.toString() == "myemail"
-                && binding.passwordInputEditText.text.toString() == "1234"
-            ) {
-                Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
-            } else {
-                Toast.makeText(
-                    activity,
-                    getString(R.string.login_error_message),
-                    Toast.LENGTH_SHORT
-                ).show()
-                Timber.i("Invalid email or password!")
-            }
+            view.findNavController()
+                .navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
         binding.buttonLoginWithExistingAccount.setOnClickListener { view: View ->
