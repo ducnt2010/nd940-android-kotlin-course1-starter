@@ -29,5 +29,6 @@
     <string name="title_instructions">INSTRUCTIONS ON BOARDING</string>
     <string name="login_error_message">Invalid email or password!</string>
     <string name="fill_full_detail_information_message">Fill full detail information to add a new shoe</string>
+    <string name="logout">Logout</string>
 
 </resources>

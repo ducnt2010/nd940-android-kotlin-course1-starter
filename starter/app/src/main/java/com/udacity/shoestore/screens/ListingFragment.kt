@@ -1,14 +1,14 @@
 package com.udacity.shoestore.screens
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ListingFragmentBinding
 import com.udacity.shoestore.databinding.ShoeItemBinding
@@ -35,7 +35,6 @@ class ListingFragment : Fragment() {
 
         viewModel.listShoe.observe(viewLifecycleOwner, Observer { listShoe: MutableList<Shoe> ->
             for (shoe in listShoe) {
-//                Timber.i("get shoe from list: $shoe")
                 addShoeItem(shoe)
             }
         })
@@ -45,7 +44,18 @@ class ListingFragment : Fragment() {
                 .navigate(ListingFragmentDirections.actionListingFragmentToDetailFragment())
         }
 
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.nav_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
     private fun addShoeItem(shoe: Shoe) {
