@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import com.udacity.shoestore.models.Shoe
@@ -23,13 +24,14 @@ class MainActivity : AppCompatActivity() {
         Timber.i("onCreate")
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        setSupportActionBar(binding.toolbar)
+
         val navController = findNavController(R.id.navHostFragment)
         val appBarConfiguration =
             AppBarConfiguration(setOf(R.id.loginFragment, R.id.listingFragment))
-
-        binding.toolbar.setupWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         shoeViewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
-//        setSupportActionBar(binding.toolbar)
     }
 
     override fun onSupportNavigateUp(): Boolean {
