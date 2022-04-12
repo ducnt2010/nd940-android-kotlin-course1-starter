@@ -54,6 +54,7 @@ class ListingFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        findNavController().popBackStack()
         return NavigationUI.onNavDestinationSelected(item, findNavController())
                 || super.onOptionsItemSelected(item)
     }

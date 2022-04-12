@@ -38,7 +38,9 @@ class DetailFragment : Fragment() {
             viewLifecycleOwner,
             Observer { isNewShoeAdded: Boolean ->
                 if (isNewShoeAdded) {
-                    findNavController().navigateUp()
+//                    findNavController().navigateUp()
+                    findNavController().popBackStack()
+
                     viewModel.onNewShoeAddedComplete()
                     viewModel.resetInput()
                     Timber.i("new shoe was added")
@@ -61,7 +63,9 @@ class DetailFragment : Fragment() {
         binding.shoeViewModel = viewModel
 
         binding.buttonCancel.setOnClickListener { view: View ->
-            view.findNavController().navigateUp()
+//            view.findNavController().navigateUp()
+            findNavController().popBackStack()
+
             viewModel.resetInput()
         }
 
