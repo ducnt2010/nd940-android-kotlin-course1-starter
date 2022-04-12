@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
         shoeViewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
-        setSupportActionBar(binding.toolbar)
+//        setSupportActionBar(binding.toolbar)
     }
 
     override fun onSupportNavigateUp(): Boolean {
