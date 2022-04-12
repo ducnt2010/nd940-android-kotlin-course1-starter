@@ -10,6 +10,10 @@
             type="com.udacity.shoestore.viewmodels.ShoeViewModel" />
     </data>
 
+    <!--    This layout contain TexView labels and EditTexts for two columns-->
+    <!--    If using LinearLayout, it will need to create 2 layers LinearLayout to arrange the views-->
+    <!--    Use ConstraintLayout to optimize it, just need only one layer ConstraintLayout-->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

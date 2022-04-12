@@ -56,11 +56,11 @@ class ShoeViewModel : ViewModel() {
 
     private fun createSampleList() {
         listShoeData = mutableListOf(
-            Shoe("name1", 39.0, "company 1", "description"),
-            Shoe("name2", 40.0, "company 2", "description"),
-            Shoe("name3", 41.0, "company 3", "description"),
-            Shoe("name4", 42.0, "company 4", "description"),
-            Shoe("name5", 43.0, "company 5", "description")
+            Shoe("RunningShoe", 39.0, "Company A", "Best for running"),
+            Shoe("WalkingShoe", 40.0, "Company B", "Shoe for walking"),
+            Shoe("FashionShoe", 41.0, "Company C", "Very fashion"),
+            Shoe("CasualShoe", 42.0, "Company D", "For Casual style"),
+            Shoe("DanceShoe", 43.0, "Company E", "Dancing")
         )
     }
 

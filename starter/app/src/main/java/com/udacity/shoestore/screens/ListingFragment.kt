@@ -70,30 +70,4 @@ class ListingFragment : Fragment() {
         itemView.shoeItem = shoe
         binding.layoutListItem.addView(itemView.root)
     }
-
-//    override fun onStart() {
-//        super.onStart()
-//        Timber.i("onStart")
-//    }
-//
-//    override fun onResume() {
-//        super.onResume()
-//        Timber.i("onResume")
-//
-//    }
-//
-//    override fun onPause() {
-//        super.onPause()
-//        Timber.i("onPause")
-//    }
-//
-//    override fun onStop() {
-//        super.onStop()
-//        Timber.i("onStop")
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        Timber.i("onDestroyView")
-//    }
 }

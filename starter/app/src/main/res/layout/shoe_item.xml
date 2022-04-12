@@ -10,6 +10,10 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!--    This layout contain labels TextView for two columns-->
+    <!--    If using LinearLayout, it will need to create 2 layers of LinearLayout to arrange the views-->
+    <!--    Use ConstraintLayout to optimize it, just need only one layer ConstraintLayout-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

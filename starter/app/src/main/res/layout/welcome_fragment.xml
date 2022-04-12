@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--    This layout contain TextView, ImageView and Button arrange vertically-->
+    <!--    Use LinearLayout for simple implement-->
+    <!--    Wrapped in a ScrollView to scrollable in landscape-->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

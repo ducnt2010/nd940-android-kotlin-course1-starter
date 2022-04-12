@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--    This layout contain list Shoes item arrange vertically-->
+    <!--    Use LinearLayout to show as a list-->
+    <!--    Wrapped in a ScrollView to scrollable the list-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
